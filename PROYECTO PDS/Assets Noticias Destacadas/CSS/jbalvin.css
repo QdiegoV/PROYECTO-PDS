@@ -1,0 +1,308 @@
+/* Estilo general */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+/* Header */
+#header {
+    background-color: white;
+    transition: background-color 0.5s ease, padding 0.5s ease;
+}
+
+/* Contenedor principal del header */
+.container_header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 20px;
+    transition: padding 0.5s ease;
+}
+
+.logo_img {
+    height: 70px; 
+    margin-right: 60px;
+    margin-left: 40px;
+    transition: height 0.5s ease;
+}
+
+.main_menu {
+    display: flex;
+    list-style: none;
+    padding: 0;
+}
+
+.main_menu li {
+    margin: 0 15px;
+}
+
+.main_menu a {
+    color:  rgb(1, 23, 40);
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 18px;
+    padding: 15px 20px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.main_menu a:hover {
+    color: red;
+    border-bottom: 4px solid red;
+    border-radius: 10px;
+}
+
+.main_menu .select {
+    color: whitesmoke;
+    background-color: rgb(1, 23, 40);
+    border-radius: 10px;
+}
+
+.main_menu .select:hover {
+    color: red;
+    border-radius: 10px;
+}
+
+/* HEADER FIJO */
+#header.fixed {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: whitesmoke;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+    transition: background-color 0.5s ease, padding 0.5s ease;
+    z-index: 1000;
+}
+
+#header.fixed .container_header {
+    padding: 15px 20px;
+}
+
+#header.fixed .logo_img {
+    height: 60px;
+}
+
+/* Botón hamburguesa oculto por defecto */
+.menu-toggle {
+  display: none;
+  font-size: 28px;
+  cursor: pointer;
+  color: rgb(1, 23, 40);
+  padding: 10px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+  }
+
+  .main_menu {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+    background-color: white;
+  }
+
+  .main_menu.active {
+    display: flex;
+  }
+
+  .container_header {
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+}
+
+.noticia-j-balvin {
+  max-width: 1000px;
+  margin: 40px auto;
+  padding: 25px;
+  background-color: #fff;
+  color: #1e1e1e;
+  font-family: 'Segoe UI', sans-serif;
+  line-height: 1.75;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  border-radius: 12px;
+}
+
+.noticia-j-balvin h1 {
+  font-size: 28px;
+  color: #b5121b;
+  margin-bottom: 20px;
+}
+
+.noticia-j-balvin h2 {
+  font-size: 22px;
+  color: #b5121b;
+  margin-top: 30px;
+  margin-bottom: 15px;
+}
+
+.imagen-principal,
+.imagen-secundaria {
+  width: 100%;
+  border-radius: 10px;
+  margin: 20px 0;
+  object-fit: cover;
+}
+
+blockquote {
+  border-left: 5px solid #b5121b;
+  padding-left: 15px;
+  margin: 20px 0;
+  font-style: italic;
+  color: #444;
+  background-color: #f9f9f9;
+  padding: 15px;
+  border-radius: 6px;
+}
+
+.video-contenedor {
+  margin: 30px 0;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.pie-noticia {
+  margin-top: 40px;
+  text-align: right;
+}
+
+.etiqueta {
+  background-color: #b5121b;
+  color: white;
+  padding: 8px 16px;
+  border-radius: 30px;
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/*Estilo Footer*/
+.Footer{
+   width: 100%;
+   background: rgb(1, 23, 40);
+}
+/*Estilo Footer dentro del div llamado grupo 1*/
+.Footer .grupo_1{
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 50px;
+    padding: 45px 0px;
+}
+.Footer .grupo_1 .box figure{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.Footer .grupo_1 .box figure img{
+    width: 250px;
+    height: 150px;
+}
+.Footer .grupo_1 .box h2{
+    color: white;
+    margin-bottom: 25px;
+    font-size: 20px;
+}
+.Footer .grupo_1 .box p{
+    color: #efefef;
+    margin-bottom: 10px;
+}
+.Footer .grupo_1 .Redes_Sociales a{
+    display: inline-block;
+    text-decoration: none;
+    width: 45px;
+    height: 45px;
+    line-height: 45px;
+    color: white;
+    margin-right: 10px;
+    background-color: #0d2033;
+    text-align: center;
+    transition: all 300ms ease;
+}
+.Footer .grupo_1 .Redes_Sociales a:hover{
+    color:red;
+    border-bottom: 4px solid red;
+}
+
+/*Estilo Footer dentro del div llamado grupo 2*/
+.Footer .grupo_2{
+    background-color: #0a1a2a;
+    padding: 15px 10px;
+    text-align: center;
+    color: white;
+}
+.Footer .grupo_2 small{
+    font-size: 15px;
+}
+
+@media (max-width: 768px) {
+  .container_header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .logo_img {
+    margin: 0 auto;
+  }
+
+  .main_menu {
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .container_cover {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 20px;
+  }
+
+  .cover .container_info {
+    margin-top: 0;
+  }
+
+  .cover h1 {
+    font-size: 40px;
+  }
+
+  .cover h2 {
+    font-size: 28px;
+    margin-top: -15px;
+  }
+
+  .cover p {
+    font-size: 18px;
+  }
+
+  .container_vector img {
+    position: static;
+    width: 100%;
+    max-width: 400px;
+    margin-top: 20px;
+  }
+
+  .Footer .grupo_1 {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .Footer .grupo_1 .box figure img {
+    width: 200px;
+    height: auto;
+  }
+}
